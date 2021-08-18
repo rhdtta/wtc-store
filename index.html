@@ -17,23 +17,21 @@
     <title>WTC Store</title>
 </head>
 <body>
-  <!-- Navbar Starts -->
+  <!-- 1. Navbar Starts -->
   <nav class="navbar navbar-expand-md navbar-light" style="background-color: #e1e2e4; justify-content: start;">
-    <div  class="container-fluid"> <!-- Add a contianer-fluid to wrap the header of navbar -->
-      <a href="#" class="navbar-brand navbar-text h1" style="margin-left: 7%;" color: #757677;>
+    <div  class="container"> <!-- Add a contianer-fluid to wrap the header of navbar -->
+      <a href="#" class="navbar-brand navbar-text h1" color: #757677;>
         <span class="glyphicon glyphicon-user" style="font-size: 14px;"></span>
         <span class="d-none d-md-inline" style="font-size: 14px;">Login</span>
       </a>
-      <!-- THis button is toggled on when the windows size is less than lg, and simultaneosly the dorpdown-list appears -->
+      <!-- This button is toggled on when the windows size is less than md, and simultaneously the dorpdown-list appears -->
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#dropdown-list" aria-expanded="false" aria-controls="Dropdown List"><i class="glyphicon glyphicon-align-center"></i></button>
       <div class="collapse navbar-collapse" id="dropdown-list">
         
         <!-- To make a dropdown list, you need to create a div with class="dropdown" and inside this div you need a button/link
         and a list that would be should on button/link press -->
-        <div class="dropdown" style="margin-left: 64vw;">
+        <div class="dropdown d-none d-md-inline" style="margin-left: 64vw;">
           <a href="#" class="navbar-text dropdown-toggle" role="button" id="currency-list" data-bs-toggle="dropdown" style="text-decoration: none; font-size: 12px; color: #757677; ">Currency: USD<span class="caret"></span></a>
-          
-          
           <ul class="dropdown-menu" aria-labelledby="currency-list">
             <li><a class="dropdown-item" style="text-decoration: none;" href="#">USD</a></li>
             <li><a class="dropdown-item" style="text-decoration: none;" href="#">GBP</a></li>
@@ -41,7 +39,8 @@
           </ul>
         </div>
 
-        <div class="dropdown" style="margin-left: 3%;">
+        
+        <div class="dropdown d-none d-md-inline" style="margin-left: 3%;">
           <a href="#" class="navbar-text dropdown-toggle" role="button" id="language-list" data-bs-toggle="dropdown" style="text-decoration: none; font-size: 12px; color: #757677; ">Language: English<span class="caret"></span></a>
           <ul class="dropdown-menu" aria-labelledby="language-list">
             <li><a class="dropdown-item" style="text-decoration: none;" href="#">English</a></li>
@@ -50,29 +49,62 @@
           </ul>
         </div>
         
+        <!-- For smaller than md Starts  -->
+        <div class="dropdown d-md-none" style="margin-left: 64vw;">
+          <a href="#" class="navbar-text dropdown-toggle" role="button" id="currency-list" data-bs-toggle="dropdown" style="text-decoration: none; font-size: 12px; color: #757677; ">Currency: USD<span class="caret"></span></a>
+          <ul class="dropdown-menu" aria-labelledby="currency-list">
+            <li><a class="dropdown-item" style="text-decoration: none;" href="#">USD</a></li>
+            <li><a class="dropdown-item" style="text-decoration: none;" href="#">GBP</a></li>
+            <li><a class="dropdown-item" style="text-decoration: none;" href="#">CAD</a></li>
+          </ul>
+        </div>
+        
+        <div class="dropdown d-md-none" style="margin-left: 64vw;">
+          <a href="#" class="navbar-text dropdown-toggle" role="button" id="language-list" data-bs-toggle="dropdown" style="text-decoration: none; font-size: 12px; color: #757677; ">Language: English<span class="caret"></span></a>
+          <ul class="dropdown-menu" aria-labelledby="language-list">
+            <li><a class="dropdown-item" style="text-decoration: none;" href="#">English</a></li>
+            <li><a class="dropdown-item" style="text-decoration: none;" href="#">Espanol</a></li>
+            <li><a class="dropdown-item" style="text-decoration: none;" href="#">German</a></li>
+          </ul>
+        </div>
+        <!-- For smaller than md Ends -->
+        
       </div>
     </div>
   </nav>
   <!-- Navbar Ends -->
 
 
-  <!-- Section for WTC Store Starts -->
+  <!-- 2. Section for WTC Store Starts -->
   <section class="container-fluid mt-4 mb-4 ">
-    <h1 style="margin-left: 7%; color: #757677;" class="d-inline">WTC Store</h1>
+    <div class="container" style="display: flex; justify-content: space-between;">
+      <h1 style="color: #757677;" class="d-inline">WTC Store</h1>
+  
+      <h3 class="d-inline position-relative p-2 d-none d-md-inline" style="color: #757677; border-color: #e1e2e4; border-style: solid; border-width: 0.6mm; padding: 5px 5px" >
+        Cart -   <b style="color: rgba(46, 97, 165, 0.822);">$100&nbsp;&nbsp;</b>  
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        &nbsp;
+  
+        <span class="text-center p-1 bg-primary rounded-circle " style="font-size: 12px; width: 18px; height: 18px; color: white; line-height: 12px; position: absolute; top:-9px; right:-9px">5</span>
+      </h3>
+      
+      <!-- For mobile starts  -->
+      <h3 class="d-inline position-relative p-0 d-md-none" style="color: #757677; border-color: #e1e2e4; border-style: solid; border-width: 0.6mm; padding: 5px 5px" >
+        Cart -   <b style="color: rgba(46, 97, 165, 0.822);">$100&nbsp;&nbsp;</b>  
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        &nbsp;
+  
+        <span class="text-center p-1 bg-primary rounded-circle " style="font-size: 12px; width: 18px; height: 18px; color: white; line-height: 12px; position: absolute; top:-9px; right:-9px">5</span>
+      </h3>
+      <!-- For mobile ends  -->
 
-    <h3 style="margin-left: 65vw; color: #757677; border-color: #e1e2e4; border-style: solid; border-width: 0.6mm; padding: 5px 5px" class="d-inline position-relative">
-      Cart -   <b style="color: rgba(46, 97, 165, 0.822);">$100&nbsp;&nbsp;</b>  
-      <span class="glyphicon glyphicon-shopping-cart"></span>
-      &nbsp;
-
-      <span class="text-center p-1 bg-primary rounded-circle " style="font-size: 12px; width: 18px; height: 18px; color: white; line-height: 12px; position: absolute; top:-9px; right:-9px">5</span>
-    </h3>
+    </div>
   </section>
   <!-- Section Ends -->
 
 
-  <!-- Second navigation panel starts -->
-  <nav id="id_nav" class="navbar navbar-expand-md navbar-light"  style="background-color: #e1e2e4; height: 40px; padding-top: 0; padding-bottom: 0;">
+  <!-- 3. Second navigation panel starts -->
+  <nav id="id_nav" class="navbar navbar-expand-md navbar-light d-none d-md-flex"  style="background-color: #e1e2e4; height: 40px; padding-top: 0; padding-bottom: 0;">
     <div class="container d-inline" style="align-items:flex-start; width: 88vw;" id="second-nav">
       <a href="#" class="nav-link d-inline h5" style="text-decoration: none; color: #757677;">HOME</a>
       <a href="#" class="nav-link d-inline h5" style="text-decoration: none; color: #757677;">CATEGORY</a>
@@ -80,10 +112,21 @@
       <a href="#" class="nav-link d-inline h5" style="text-decoration: none; color: #757677;">CONTACT</a>
     </div>
   </nav>
+
+  <!-- for mobile starts  -->
+  <nav id="id_nav" class="navbar navbar-expand-md navbar-light d-md-none"  style="background-color: #e1e2e4; height: 30px; padding-top: 0; padding-bottom: 0;">
+    <div class="container d-inline" style="align-items:flex-start; width: 88vw;" id="second-nav">
+      <a href="#" class="nav-link d-inline h5" style="text-decoration: none; color: #757677; padding-top: 6px; padding-bottom: 8px;">HOME</a>
+      <a href="#" class="nav-link d-inline h5" style="text-decoration: none; color: #757677; padding-top: 6px; padding-bottom: 8px;">CATEGORY</a>
+      <a href="#" class="nav-link d-inline h5" style="text-decoration: none; color: #757677; padding-top: 6px; padding-bottom: 8px;">OTHERS</a>
+      <a href="#" class="nav-link d-inline h5" style="text-decoration: none; color: #757677; padding-top: 6px; padding-bottom: 8px;">CONTACT</a>
+    </div>
+  </nav>
+  <!-- for mobile ends  -->
   <!-- Second navigation panel ends  -->
 
 
-  <!-- Carousel Section begins -->
+  <!-- 4. Carousel Section begins -->
   <div id="carouselExampleControls" class="carousel slide container" data-bs-ride="carousel" s>
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -204,46 +247,83 @@
   <!-- Carousel Section Ends -->
 
 
-  <!-- Information Section Begins  -->
-  <section class="container mt-5" style="display: flex; justify-content: space-between; text-align: center;">
-    <div style="height: 120px; width: 23%; background-color: #5A88CA;" class="d-inline-block">
+
+
+  <!-- 5. Information Section Begins  -->
+  <section class="container mt-5 d-none d-md-flex" style="display: flex; justify-content: space-between; text-align: center;">
+    <div style="height: 110px; width: 23%; background-color: #5A88CA;" class="d-inline-block">
       <div class="container">
         <span class="glyphicon glyphicon-refresh d-block mt-4 mb-2" style="color:white; font-size: 40px;"></span>
         <span class="d-block mt-4" style="font-size: 20px; color: white;">30 Days Return</span>
       </div>
     </div>
-    <div style="height: 120px; width: 23%; background-color: #FFD900;" class="d-inline-block">
+    <div style="height: 110px; width: 23%; background-color: #FFD900;" class="d-inline-block">
       <div class="container">
         <span class="glyphicon glyphicon-plane d-block mt-4 mb-2" style="color:white; font-size: 40px;"></span>
         <span class="d-block mt-4" style="font-size: 20px; color: white;">Free Shipping</span>
       </div>
     </div>
-    <div style="height: 120px; width: 23%; background-color: #FA8072;" class="d-inline-block">
+    <div style="height: 110px; width: 23%; background-color: #FA8072;" class="d-inline-block">
       <div class="container">
         <span class="glyphicon glyphicon-lock d-block mt-4 mb-2" style="color:white; font-size: 40px;"></span>
         <span class="d-block mt-4" style="font-size: 20px; color: white;">Secure Payments</span>
       </div>
     </div>
-    <div style="height: 120px; width: 23%; background-color: #4ABEBD;" class="d-inline-block">
+    <div style="height: 110px; width: 23%; background-color: #4ABEBD;" class="d-inline-block">
       <div class="container">
         <span class="glyphicon glyphicon-gift d-block mt-4 mb-2" style="color:white; font-size: 40px;"></span>
         <span class="d-block mt-4" style="font-size: 20px; color: white;">New Products</span>
       </div>
     </div>
   </section>
+
+  <!-- for mobile starts  -->
+  <section class="container mt-5 d-md-none" style="display: flex; justify-content: space-between; text-align: center;">
+    <div style="height: 70px; width: 23%; background-color: #5A88CA;" class="d-inline-block">
+      <div class="container">
+        <span class="glyphicon glyphicon-refresh d-block mt-3 mb-3 fs-4" style="color:white; font-size: 40px;"></span>
+        <span class="d-inline mt-4" style="font-size: 12px; color: white; line-height: 12px;">30 Days Return</span>
+      </div>
+    </div>
+    <div style="height: 70px; width: 23%; background-color: #FFD900;" class="d-inline-block">
+      <div class="container">
+        <span class="glyphicon glyphicon-plane d-block mt-3 mb-3 fs-4" style="color:white; font-size: 40px;"></span>
+        <span class="d-inline mt-4" style="font-size: 12px; color: white; line-height: 12px;">Free Shipping</span>
+      </div>
+    </div>
+    <div style="height: 70px; width: 23%; background-color: #FA8072;" class="d-inline-block">
+      <div class="container">
+        <span class="glyphicon glyphicon-lock d-block mt-3 mb-3 fs-4" style="color:white; font-size: 40px;"></span>
+        <span class="d-inline mt-4" style="font-size: 12px; color: white; line-height: 12px;">Secure Payments</span>
+      </div>
+    </div>
+    <div style="height: 70px; width: 23%; background-color: #4ABEBD;" class="d-inline-block">
+      <div class="container">
+        <span class="glyphicon glyphicon-gift d-block mt-3 mb-3 fs-4" style="color:white; font-size: 40px;"></span>
+        <span class="d-inline mt-4" style="font-size: 12px; color: white; line-height: 12px;">New Products</span>
+      </div>
+    </div>
+  </section>
+  <!-- for mobile ends  -->
   <!-- Information Section Ends  -->
 
-  <!-- Latest Products Text  Begins-->
+
+
+  <!-- 6. Latest Products Text  Begins-->
   <section>
-    <div class="container mt-5 mb-5" style="display: flex; justify-content: center;">
+    <div class="container mt-5 mb-5 d-none d-md-block" style="display: flex; justify-content: center;">
       <h1 style="font-size: 60px; font-weight: 200;">Latest Products</h1>
     </div>
   </section>
   <!-- Latest Products Text Ends -->
 
-  <!-- Recommended Products Starts -->
-  <div class="container mb-4" style="display: flex; justify-content: space-evenly;">
-    <div id="prod_1" class="collapse" style="margin: 0 10px;">
+
+
+
+
+  <!-- 7. Recommended Products Starts -->
+  <div class="container mb-4 d-none d-md-flex" style="display: flex; justify-content: space-evenly;">
+    <div id="prod_1_md" class="collapse" style="margin: 0 10px;">
       <img src="assets/img/products/product-1.jpg" alt="">
       <h4>Samsung Galaxy S5 2015</h4>
       <b style="font-size: 16px; color: cornflowerblue;">$700.00</b> &nbsp; <strike style="font-size: 12px;">$100.00</strike>
@@ -252,7 +332,7 @@
       <b>Add to cart</b>
     </div>
     
-    <div id="prod_2" class="collapse">
+    <div id="prod_2_md" class="collapse">
       <img src="assets/img/products/product-2.jpg" alt="">
       <h4>Nokia Lumia 1320</h4>
       <b style="font-size: 16px; color: cornflowerblue;">$899.00</b> &nbsp; <strike style="font-size: 12px;">$999.00</strike>
@@ -262,7 +342,7 @@
     </div>
     
     
-    <div id="prod_3" class="collapse">
+    <div id="prod_3_md" class="collapse">
       <img src="assets/img/products/product-3.jpg" alt="">
       <h4>LG Leon 2015</h4>
       <b style="font-size: 16px; color: cornflowerblue;">$400.00</b> &nbsp; <strike style="font-size: 12px;">$425.00</strike>
@@ -272,7 +352,7 @@
     </div>
     
     
-    <div id="prod_4" class="collapse">
+    <div id="prod_4_md" class="collapse">
       <img src="assets/img/products/product-4.jpg" alt="">
       <h4>Sony Xperia</h4>
       <b style="font-size: 16px; color: cornflowerblue;">$200.00</b> &nbsp; <strike style="font-size: 12px;">$225.00</strike>
@@ -282,7 +362,7 @@
     </div>
     
     
-    <div id="prod_5" class="collapse">
+    <div id="prod_5_md" class="collapse">
       <img src="assets/img/products/product-5.jpg" alt="" style="height: 243px; width: 195px; border-style: solid; border-width: .1mm; border-color: rgb(233, 230, 230);">
       <h4>iPhone 6</h4>
       <b style="font-size: 16px; color: cornflowerblue;">$1200.00</b> &nbsp; <strike style="font-size: 12px;">$1355.00</strike>
@@ -292,7 +372,7 @@
     </div>
     
     
-    <div id="prod_6" class="collapse">
+    <div id="prod_6_md" class="collapse">
       <img src="assets/img/products/product-6.jpg" alt=""  style="height: 243px; width: 195px;">
       <h4>Samsung Galaxy S5 2015</h4>
       <b style="font-size: 16px; color: cornflowerblue;">$700.00</b> &nbsp; <strike style="font-size: 12px;">$100.00</strike>
@@ -301,14 +381,84 @@
       <b>Add to cart</b>
     </div>
   </div>
-  <div class="container mb-5" style="display: flex; justify-content: center;">
-    <button id="prev" onclick="prev()" class="btn btn-primary me-3 p-2  disabled">Prev</button>
-    <button id="next" onclick="next()" class="btn btn-primary p-2">Next</button>
+  <div class="container mb-5 d-none d-md-flex" style="display: flex; justify-content: center;">
+    <button id="prev_md" onclick="prev()" class="btn btn-primary me-3 p-2  disabled">Prev</button>
+    <button id="next_md" onclick="next()" class="btn btn-primary p-2">Next</button>
   </div>
+
+  <!-- for mobile starts  -->
+  <div class="container mb-4 mt-3 d-md-none" style="display: flex; justify-content: space-evenly;">
+    <div id="prod_1_sm" class="collapse" style="margin: 0 10px; width: 30%;">
+      <img src="assets/img/products/product-1.jpg" alt="" style="width: 100%;" >
+      <h6>Samsung Galaxy S5 2015</h6>
+      <b style="font-size: 10px; color: cornflowerblue;">$700.00</b> &nbsp; <strike style="font-size: 7px;">$100.00</strike>
+      <br>
+      <span class="glyphicon glyphicon-shopping-cart"></span>
+      <b style="font-size: 10px;">Add to cart</b>
+    </div>
+    
+    <div id="prod_2_sm" class="collapse" style="margin: 0 10px; width: 30%;">
+      <img src="assets/img/products/product-2.jpg" alt="" style="width: 100%;" >
+      <h6>Nokia Lumia 1320</h6>
+      <b style="font-size: 10px; color: cornflowerblue;">$899.00</b> &nbsp; <strike style="font-size: 7px;">$999.00</strike>
+      <br>
+      <span class="glyphicon glyphicon-shopping-cart"></span>
+      <b style="font-size: 10px;">Add to cart</b>
+    </div>
+    
+    
+    <div id="prod_3_sm" class="collapse" style="margin: 0 10px; width: 30%;">
+      <img src="assets/img/products/product-3.jpg" alt="" style="width: 100%;">
+      <h6>LG Leon 2015</h6>
+      <b style="font-size: 10px; color: cornflowerblue;">$400.00</b> &nbsp; <strike style="font-size: 7px;">$425.00</strike>
+      <br>
+      <span class="glyphicon glyphicon-shopping-cart"></span>
+      <b style="font-size: 10px;">Add to cart</b>
+    </div>
+    
+    
+    <div id="prod_4_sm" class="collapse" style="margin: 0 10px; width: 30%;">
+      <img src="assets/img/products/product-4.jpg" alt="" style="width: 100%;">
+      <h6>Sony Xperia</h6>
+      <b style="font-size: 10px; color: cornflowerblue;">$200.00</b> &nbsp; <strike style="font-size: 7px;">$225.00</strike>
+      <br>
+      <span class="glyphicon glyphicon-shopping-cart"></span>
+      <b style="font-size: 10px;">Add to cart</b>
+    </div>
+    
+    
+    <div id="prod_5_sm" class="collapse" style="margin: 0 10px; width: 30%;">
+      <img src="assets/img/products/product-5.jpg" alt="" style="width: 100%; border-style: solid; border-width: .1mm; border-color: rgb(233, 230, 230);">
+      <h6>iPhone 6</h6>
+      <b style="font-size: 10px; color: cornflowerblue;">$1200.00</b> &nbsp; <strike style="font-size: 7px;">$1355.00</strike>
+      <br>
+      <span class="glyphicon glyphicon-shopping-cart"></span>
+      <b style="font-size: 10px;">Add to cart</b>
+    </div>
+    
+    
+    <div id="prod_6_sm" class="collapse" style="margin: 0 10px; width: 30%;">
+      <img src="assets/img/products/product-6.jpg" alt=""  style="width: 100%;">
+      <h6>Samsung Galaxy S5 2015</h6>
+      <b style="font-size: 10px; color: cornflowerblue;">$700.00</b> &nbsp; <strike style="font-size: 7px;">$100.00</strike>
+      <br>
+      <span class="glyphicon glyphicon-shopping-cart"></span>
+      <b style="font-size: 10px;">Add to cart</b>
+    </div>
+  </div>
+  <div class="container mb-5 d-md-none " style="display: flex; justify-content: center;">
+    <button id="prev_sm" onclick="prev()" class="btn btn-primary me-3 p-2  disabled">Prev</button>
+    <button id="next_sm" onclick="next()" class="btn btn-primary p-2">Next</button>
+  </div>
+  <!-- for mobile ends  -->
   <!-- Recommended Products Ends -->
   
-  <!-- Bottom Navigation Panel Starts  -->
-  <div id="nav-bottom" class="container-fluid" style="background-color: #333333;">
+
+
+
+
+  <!-- 8. Bottom Navigation Panel Starts  -->
+  <div id="nav-bottom" class="container-fluid d-none d-md-block" style="background-color: #333333;">
     <br>
     <br>
     <br>
@@ -379,11 +529,83 @@
     <br>
     
   </div>
+
+  <!-- For mobile Starts -->
+  <div id="nav-bottom" class="container-fluid d-md-none" style="background-color: #333333;">
+    <br>
+    <br>
+    <br>
+    
+    <section class="container">
+      <div class="d-block me-5 mb-5" style="width: 100%; vertical-align: top;">
+        <h1 class="d-inline" style="color: #B0B0B0; font-weight: 300; font-size: 40px;">WTC</h1>
+        &nbsp;
+        <h1 class="d-inline" style="color: cornflowerblue; font-weight: 300; font-size: 40px;">Store</h1>
+        <p style="overflow-wrap: break-word; margin-top: 15px; font-size: 12px; color:#B0B0B0;" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum tenetur unde earum magni corporis sit ea, suscipit iste quos, laborum doloribus. Totam, eius. Dolore, nostrum dolorem. Totam ad ipsum voluptatum.</p>
+        <a href="#" style="text-decoration: none;">
+          <i class="fa fa-facebook" style="font-size: 12px; background-color: #5A88CA; color: white; padding: 6px 0px 6px 8px; width: 25px; border-radius: 2px; margin-right: 2px;"></i>
+        </a>
+        <a href="#" style="text-decoration: none;">
+          <i class="fa fa-twitter" style="font-size: 12px; background-color: #5A88CA; color: white; padding: 6px 6px; width: 25px; border-radius: 2px; margin-right: 2px;"></i>
+        </a>
+        <a href="#" style="text-decoration: none;">
+          <i class="fa fa-youtube" style="font-size: 12px; background-color: #5A88CA; color: white; padding: 6px 6px; width: 25px; border-radius: 2px; margin-right: 2px;"></i>
+        </a>
+        <a href="#" style="text-decoration: none;">
+          <i class="fa fa-linkedin" style="font-size: 12px; background-color: #5A88CA; color: white; padding: 6px 6px; width: 25px; border-radius: 2px;"></i>
+        </a>
+      </div>
+      <div id="list-usernav" class="d-inline-block me-5" style="width: 40%;  vertical-align: top;">
+        <h1  class="d-inline" style="font-weight: 150; color: #B0B0B0;">User Navigation</h1>
+        <p><a href="#">My Account</a></p> 
+        <hr>
+        <p><a href="#">Order History</a></p>
+        <hr>
+        <p><a href="#">Wishlist</a></p>
+        <hr>
+        <p><a href="#">Vendor Contact</a></p>
+        <hr>
+        <p><a href="#">Front Page</a></p>
+        <hr>
+      </div>
+      <div id="list-usernav" class="d-inline-block me-5" style="width: 40%;  vertical-align: top;">
+        <h1  class="d-inline" style="font-weight: 150; color: #B0B0B0;">Categories</h1>
+        <p><a href="#">Mobile Phones</a></p> 
+        <hr>
+        <p><a href="#">Home Accessories</a></p>
+        <hr>
+        <p><a href="#">LED TV</a></p>
+        <hr>
+        <p><a href="#">Computer</a></p>
+        <hr>
+        <p><a href="#">Gadgets</a></p>
+        <hr>
+      </div>
+      <div id="list-usernav" class="d-block me-5 mt-5" style="width: 100%;  vertical-align: top;">
+        <h1  class="d-inline" style="font-weight: 150; color: #B0B0B0;">Newsletter</h1>
+        <p style="overflow-wrap: break-word; margin-top: 15px; font-size: 12px; color:#B0B0B0;" >Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+        <div class="input-group mb-3 mt-4">
+          <input class="form-control mb-4 " type="text" placeholder="Type your email"  style="height: 39.5px; min-width: 60%; font-size: 16px; border-radius: 1px;">
+          <button class="btn d-block" type="button" id="subscribe-btn" style="font-size: 18px; background-color: #5A88CA; color: white; width: 60%;  border-radius: 1px;">Subscribe</button>
+        </div>
+        
+      </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+  </div>
+  <!-- For Mobile Ends  -->
   <!-- Bottom Navigation Panel Ends  -->
 
 
 
-  <!-- Footer Begins  -->
+  <!-- 9. Footer Begins  -->
   <footer  style="background-color: black;">
     <br>
     <div class="container" style="display: flex; justify-content: space-between; color: white;">
@@ -405,8 +627,17 @@
 
 
   <script>
+    
     const total = 6;
-    const cycle = 5;
+    let cycle = 5;
+    let y = '_md';
+    if(window.innerWidth <= 768){
+      cycle = 3;
+      y='_sm';
+    }else{
+      cycle = 5;
+      y='_md';
+    }
     var list = new Array(cycle);
     
     
@@ -422,13 +653,14 @@
 
     function add(list) {
       this.list.forEach(x => {
-        document.getElementById('prod_' + x).classList.remove('collapse');
+        document.getElementById('prod_' + x + y).classList.remove('collapse');
       })
+
     }
     
     function remove(list) {
       this.list.forEach(x => {
-        document.getElementById('prod_' + x).classList.add('collapse');
+        document.getElementById('prod_' + x + y).classList.add('collapse');
       })
     }
 
@@ -445,9 +677,9 @@
       add(list);
       first = list.filter(x => x != null).slice(0)[0];
       if(first === 1) {
-        document.getElementById("prev").classList.add("disabled");
+        document.getElementById("prev" + y).classList.add("disabled");
       }
-      document.getElementById("next").classList.remove("disabled");
+      document.getElementById("next" + y).classList.remove("disabled");
       
     }
     
@@ -455,13 +687,13 @@
       remove(list);
       let last = list.filter(x => x != null).slice(-1)[0];
       list = [];
-      if(last+cycle > total){
+      if(last+cycle >= total){
         while(last!=total){
           list.push(++last);
         }
         list.sort();
         add(list);
-        document.getElementById("prev").classList.remove("disabled");
+        document.getElementById("prev" + y).classList.remove("disabled");
       }else{
         list = [];
         let i = 0;
@@ -471,13 +703,12 @@
         }
         list.sort();
         add(list);
-        document.getElementById("prev").classList.remove("disabled");
+        document.getElementById("prev" + y).classList.remove("disabled");
       }
       last = list.filter(x => x != null).slice(-1)[0];
       if(last === total){
-        document.getElementById("next").classList.add("disabled");
+        document.getElementById("next" + y).classList.add("disabled");
       }
-      console.log(list)
     }
   </script>
 
